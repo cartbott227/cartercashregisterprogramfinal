@@ -212,7 +212,7 @@ namespace cartercashregisterprogram
         {
             subtotalCalc.Visible = false;   //Makes the calculation labels invisble
             taxCalc.Visible = false;
-            totalCalc.Visible = false;
+            totalCalc.Visible = false; 
             changeCalc.Visible = false;
 
             storeLabel.Visible = false;     //Makes all the reciept labels invisible
