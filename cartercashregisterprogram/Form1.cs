@@ -34,6 +34,11 @@ namespace cartercashregisterprogram
         double taxAmount;
         double subtotal;
 
+        double burgercostr;
+        double friescostr;
+        double sodacostr;
+        double icecreamcostr;
+
         Graphics fg;  //Creates a global graphics object
 
         public mcdonaldsForm()
@@ -103,6 +108,12 @@ namespace cartercashregisterprogram
 
             totalCalc.Text = totalcost.ToString("C");   //Converts the calculation to a string (int to string)
             totalCalc.Visible = true;                   //and makes the label visible
+
+            burgercostr = burgercost * BURGER;  //Calculates individual item cost
+            friescostr = friescost * FRIES;
+            sodacostr = sodacost * SODA;
+            icecreamcostr = icecreamcost * ICECREAM;
+
         }
 
         private void payButton_Click(object sender, EventArgs e)
@@ -160,37 +171,37 @@ namespace cartercashregisterprogram
             sodaquantity.Visible = true;
             icecreamquantity.Visible = true;
 
-            burgertotalLabel.Visible = true;
+            burgertotalLabel.Visible = true;    //Makes all total cost labels visible
             friestotalLabel.Visible = true;
             sodatotalLabel.Visible = true;
             icecreamtotalLabel.Visible = true;
 
-            totalOutput.Visible = true;
+            totalOutput.Visible = true;     //Makes all output labels visible
             taxOutput.Visible = true;
             changeOutput.Visible = true;
             subtotalOutput.Visible = true;
 
-            totalrLabel.Visible = true;
+            totalrLabel.Visible = true;     //Makes all reciept total labels visible
             taxrLabel.Visible = true;
             changerLabel.Visible = true;
             subtotalrLabel.Visible = true;
             
-            burgerrLabel.Visible = true;
+            burgerrLabel.Visible = true;    //Makes all the reciept item labels visible
             friesrlabel.Visible = true; 
             sodarLabel.Visible = true;  
             icecreamrLabel.Visible = true;
 
-            burgerquantity.Text = burgertextBox.Text;
+            burgerquantity.Text = burgertextBox.Text;   //Outputs the item quantity to the receipt label
             friesquantity.Text = friestextBox.Text;
             sodaquantity.Text = sodatextBox.Text;
             icecreamquantity.Text = icecreamtextBox.Text;
 
-            burgertotalLabel.Text = burgercost.ToString("C");
-            friestotalLabel.Text = friescost.ToString("C");
-            sodatotalLabel.Text = sodacost.ToString("C");
-            icecreamtotalLabel.Text = icecreamcost.ToString("C");
+            burgertotalLabel.Text = burgercostr.ToString("C");   //Outputs the cost of each item to the receipt label
+            friestotalLabel.Text = friescostr.ToString("C");
+            sodatotalLabel.Text = sodacostr.ToString("C");
+            icecreamtotalLabel.Text = icecreamcostr.ToString("C");
 
-            subtotalOutput.Text = subtotal.ToString("C");
+            subtotalOutput.Text = subtotal.ToString("C");   //Outputs the cost labels to each 
             changeOutput.Text = change.ToString("C");
             totalOutput.Text = totalcost.ToString("C");
             taxOutput.Text = taxAmount.ToString("C");
@@ -239,22 +250,22 @@ namespace cartercashregisterprogram
             sodaquantity.Visible = false;
             icecreamquantity.Visible = false;
 
-            burgertotalLabel.Visible = false;
+            burgertotalLabel.Visible = false;   //Makes all item total labels visible
             friestotalLabel.Visible = false;
             sodatotalLabel.Visible = false;
             icecreamtotalLabel.Visible = false;
 
-            totalOutput.Visible = false;
+            totalOutput.Visible = false;    //Makes all output labels visible
             taxOutput.Visible = false;
             changeOutput.Visible = false;
             subtotalOutput.Visible = false;
 
-            totalrLabel.Visible = false;
+            totalrLabel.Visible = false;    //Makes all reciept total labels visible
             taxrLabel.Visible = false;
             changerLabel.Visible = false;
             subtotalrLabel.Visible = false;
 
-            burgerrLabel.Visible = false;
+            burgerrLabel.Visible = false;   //Makes all reciept item labels visible
             friesrlabel.Visible = false;
             sodarLabel.Visible = false;
             icecreamrLabel.Visible = false;
