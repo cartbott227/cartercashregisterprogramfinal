@@ -176,7 +176,7 @@ namespace cartercashregisterprogram
             subtotalrLabel.Visible = true;
             
             burgerrLabel.Visible = true;
-            friesrlabel.Visible = true;
+            friesrlabel.Visible = true; 
             sodarLabel.Visible = true;
             icecreamrLabel.Visible = true;
 
