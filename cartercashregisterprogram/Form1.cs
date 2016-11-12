@@ -177,7 +177,7 @@ namespace cartercashregisterprogram
             
             burgerrLabel.Visible = true;
             friesrlabel.Visible = true; 
-            sodarLabel.Visible = true;
+            sodarLabel.Visible = true;  
             icecreamrLabel.Visible = true;
 
             burgerquantity.Text = burgertextBox.Text;
